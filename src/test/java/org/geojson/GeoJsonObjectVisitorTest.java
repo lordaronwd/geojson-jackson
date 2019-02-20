@@ -67,6 +67,12 @@ public class GeoJsonObjectVisitorTest {
 			Assert.assertEquals(LineString.class, geoJsonObject.getClass());
 			return geoJsonObject;
 		}
+
+		@Override
+		public GeoJsonObject visit(Circle geoJsonObject) {
+			Assert.assertEquals(Circle.class, geoJsonObject.getClass());
+			return geoJsonObject;
+		}
 	};
 	public GeoJsonObjectVisitorTest(GeoJsonObject geoJsonObject) {
 		this.geoJsonObject = geoJsonObject;

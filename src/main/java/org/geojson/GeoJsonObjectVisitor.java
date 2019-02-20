@@ -26,6 +26,8 @@ public interface GeoJsonObjectVisitor<T> {
 
 	T visit(LineString geoJsonObject);
 
+	T visit(Circle geoJsonObject);
+
 	/**
 	 * An abstract adapter class for visiting GeoJson objects.
 	 * The methods in this class are empty.
@@ -77,6 +79,11 @@ public interface GeoJsonObjectVisitor<T> {
 
 		@Override
 		public T visit(LineString geoJsonObject) {
+			return null;
+		}
+
+		@Override
+		public T visit(Circle geoJsonObject) {
 			return null;
 		}
 	}
